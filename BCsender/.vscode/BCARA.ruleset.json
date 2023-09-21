@@ -1,0 +1,10 @@
+{
+    "name": "BC Azure Relay App ruleset",
+    "rules": [
+        {
+            "id": "AA0072",
+            "action": "None",
+            "justification": "Force Variable Name - leave it - not applicable"
+        }
+    ]
+}
