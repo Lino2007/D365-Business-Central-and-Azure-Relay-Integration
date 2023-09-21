@@ -1,7 +1,0 @@
-{
-    "al.codeAnalyzers": [
-        "${CodeCop}",
-        "${UICop}"
-    ],
-    "al.ruleSetPath": ".\\.vscode\\BCARA.ruleset.json"
-}

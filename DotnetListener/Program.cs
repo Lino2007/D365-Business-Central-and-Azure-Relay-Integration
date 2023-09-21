@@ -9,7 +9,7 @@ namespace DotnetListener
 {
     public class Program
     {
-        private static AppMode _appMode = AppMode.Api;
+        private static CommandLineArgs _appConfig;
         private static bool _isDevelopment = false;
 
         public static void Main(string[] args)
@@ -28,16 +28,17 @@ namespace DotnetListener
         private static void ParseArgsAndSetAppConfig(string[] args) =>
             new Parser(settings => settings.IgnoreUnknownArguments = true)
                 .ParseArguments<CommandLineArgs>(args)
-                .WithParsed(cmdArgs => _appMode = cmdArgs.AppMode);
+                .WithParsed(cmdArgs => _appConfig = cmdArgs);
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseSetting("AppMode", _appMode.ToString());
-                    if (_appMode == AppMode.AzureRelay)
+                    webBuilder.UseSetting("AppMode", _appConfig.AppMode.ToString());
+                    if (_appConfig.AppMode == AppMode.AzureRelay)
                     {
-                        webBuilder.UseAzureRelay(options => options.UrlPrefixes.Add(GetAzureRelayConnectionString())).UseUrls();
+                        var connectionString = GetAzureRelayConnectionString();
+                        webBuilder.UseAzureRelay(options => options.UrlPrefixes.Add(connectionString)).UseUrls();
                     }
                     webBuilder.UseStartup<Startup>();
                 });
