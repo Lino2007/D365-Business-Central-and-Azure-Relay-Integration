@@ -1,0 +1,11 @@
+# Use this file to temporarily store configuration when setting up project example
+Azure Relay namespace:
+        	Name: <name>
+        	Primary Connection String: <connection_string>
+        	Primary key: <primary_key>
+	       Shared access policy name: RootManageSharedAccessKey (by default)
+Hybrid Connection:
+        	Name: <name>
+        	Primary Connection String: <connection_string>
+        	Primary key: <primary_key> 
+                Shared access policy name: <name>
