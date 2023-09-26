@@ -37,7 +37,7 @@ If you are not accustomed to using VS Code for C# development, you have option t
 
   
 
-## Setup
+## Setup :wrench:
 
 1. Clone the repository
 
