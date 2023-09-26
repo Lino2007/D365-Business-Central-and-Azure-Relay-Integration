@@ -48,8 +48,9 @@ If you are not accustomed to using VS Code for C# development, you have option t
 4. Configure listener by running following commands from the root of the *DotnetListener* project:
 
     dotnet user-secrets init
-    dotnet user-secrets set 'AzureRelay:ConnectionString' '<hybrid_connection_string>'
     
+    dotnet user-secrets set 'AzureRelay:ConnectionString' '<hybrid_connection_string>'
+
 
 5. Select the *Launch as Azure Relay listener (DotnetListener)* launch configuration from the *Run and Debug* view (CTRL + SHIFT + D) and run the application. Alternatively,you can run application from the terminal:
 
