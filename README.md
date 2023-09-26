@@ -49,10 +49,12 @@ If you are not accustomed to using VS Code for C# development, you have option t
 
     dotnet user-secrets init
     dotnet user-secrets set 'AzureRelay:ConnectionString' '<hybrid_connection_string>'
+    
 
 5. Select the *Launch as Azure Relay listener (DotnetListener)* launch configuration from the *Run and Debug* view (CTRL + SHIFT + D) and run the application. Alternatively,you can run application from the terminal:
 
     dotnet run --AppMode AzureRelay
+
 
 6. Open *BCSender* application and navigate to *Azure Service Bus Relay Setup* page. Populate fields using respective values from azure-relay-config.txt and tick *IsEnabled* option (in the same row). You will be also asked to setup encryption key, for this example you can skip it.
 
