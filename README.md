@@ -3,9 +3,9 @@
 
 This is example project for articles:
 
-- Integrate Business Central and corporate services with Azure Relay - part 1
+- [Integrate Business Central and corporate services with Azure Relay - part 1](https://www.linkedin.com/pulse/integrate-business-central-corporate-services-azure-relay-bevanda?trk=public_profile_article_view)
 
-- Integrate Business Central and corporate services with Azure Relay - part 2 (coming soon)
+- Integrate Business Central and corporate services with Azure Relay - part 2
 
   
 
@@ -31,7 +31,7 @@ Both projects are included in VS Code workspace file.
 
 - VS Code with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) (optional)
 
-  
+- [Postman](https://marketplace.visualstudio.com/items?itemName=Postman.postman-for-vscode) VS Code extension (optional)
 
 If you are not accustomed to using VS Code for C# development, you have option to open *DotnetListener* project in Visual Studio via .sln file (project's root).
 
@@ -47,7 +47,7 @@ If you are not accustomed to using VS Code for C# development, you have option t
 
 4. Configure listener by running following commands from the root of the *DotnetListener* project:
 
-    dotnet user-secrets init
+    dotnet user-secrets init  # run only once (after you clone project)
 
     dotnet user-secrets set 'AzureRelay:ConnectionString' '<hybrid_connection_string>'
 
@@ -59,5 +59,9 @@ If you are not accustomed to using VS Code for C# development, you have option t
 
 6. Open *BCSender* application and navigate to *Azure Service Bus Relay Setup* page. Populate fields using respective values from [Azure Relay configuration file](./azure-relay-config.txt) and tick *IsEnabled* option (in the same row). You will be also asked to setup encryption key, for this example you can skip it.
 
+**Hint:** Use tooltips to get more informations about fields.
+
 7. Run 'Test Connection' action and if you configured everything correctly, you should expect message 'Hello from Azure Relay listener API!'.
 
+
+*Would you like to provide feedback or report a problem with the project? Please feel free to open a GitHub issue.*

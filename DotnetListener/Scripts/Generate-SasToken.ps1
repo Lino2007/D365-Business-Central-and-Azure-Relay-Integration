@@ -1,9 +1,9 @@
-# usage example: .\Generate-SasToken.ps1 -URI 'contosorelay.servicebus.windows.net/contosohc' -AccessPolicyName 'RootManageSharedAccessKey' -AccessPolicyKey 'PrimaryKey' -DurationInMinutes 15
+# usage example: .\Generate-SasToken.ps1 -URI 'https://demo-relay.servicebus.windows.net/demo-hc' -AccessPolicyName 'demo-hc-policy' -AccessPolicyKey '<hybrid-connection-primary-key>'
 Param(
     [string] $URI,
     [string] $AccessPolicyName,
     [string] $AccessPolicyKey,
-    [integer] $ExpirationInMinutes = 15
+    [int] $ExpirationInMinutes = 15
 )
 [Reflection.Assembly]::LoadWithPartialName("System.Web") | out-null
 

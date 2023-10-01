@@ -45,6 +45,7 @@ namespace DotnetListener
 
         private static string GetAzureRelayConnectionString()
         {
+            // develop production code that suits your needs..
             if (!_isDevelopment)
             {
                 throw new NotImplementedException("Getting Azure Relay connection string is not supported outside the development environment.");
