@@ -5,7 +5,7 @@ This is example project for articles:
 
 - [Integrate Business Central and corporate services with Azure Relay - part 1](https://www.linkedin.com/pulse/integrate-business-central-corporate-services-azure-relay-bevanda?trk=public_profile_article_view)
 
-- Integrate Business Central and corporate services with Azure Relay - part 2
+- [Integrate Business Central and corporate services with Azure Relay - part 2](https://www.linkedin.com/pulse/integrate-business-central-corporate-services-azure-relay-bevanda-1f?utm_source=share&utm_medium=guest_desktop&utm_campaign=copy)
 
   
 
@@ -52,7 +52,7 @@ If you are not accustomed to using VS Code for C# development, you have option t
     dotnet user-secrets set 'AzureRelay:ConnectionString' '<hybrid_connection_string>'
 
 
-5. Select the *Launch as Azure Relay listener (DotnetListener)* launch configuration from the *Run and Debug* view (CTRL + SHIFT + D) and run the application. Alternatively,you can run application from the terminal:
+5. Select the *Launch as Azure Relay listener (DotnetListener)* launch configuration from the *Run and Debug* view (CTRL + SHIFT + D) and run the application. Alternatively, you can run application from the terminal:
 
     dotnet run --AppMode AzureRelay
 
@@ -63,5 +63,7 @@ If you are not accustomed to using VS Code for C# development, you have option t
 
 7. Run 'Test Connection' action and if you configured everything correctly, you should expect message 'Hello from Azure Relay listener API!'.
 
+
+**Note:** When launching either BC application or .NET listener from VS Code, check whether you selected correct launch profile in *Run and Debug* view.
 
 *Would you like to provide feedback or report a problem with the project? Please feel free to open a GitHub issue.*
